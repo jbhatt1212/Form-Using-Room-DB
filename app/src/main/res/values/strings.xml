@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Form Using Room Demo</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="enter_email_address">Enter Email address</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="submit">Submit</string>
+    <string name="select_gender">Select gender\n</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="gender">gender</string>
+    <string name="selct_image">select image</string>
+    <string name="select_your_hobby">select your hobby</string>
+    <string name="select_your_image">select your image</string>
+    <string name="writing">Writing</string>
+    <string name="reading_books">Reading</string>
+    <string name="listening">listening</string>
+    <string name="iamge_jpeg">image.jpeg</string>
+</resources>

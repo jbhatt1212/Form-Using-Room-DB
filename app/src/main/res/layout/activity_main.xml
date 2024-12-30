@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/roboto_serif"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_email_address"
+       app:layout_constraintTop_toBottomOf="@id/textInputLayoutName"
+        android:layout_margin="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/roboto_serif"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_password"
+app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmail"       
+        android:layout_margin="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/roboto_serif"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_mobile_number"
+app:layout_constraintTop_toBottomOf="@id/textInputLayoutPassword"        android:layout_margin="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContact"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/roboto_serif"
+            android:inputType="phone"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:id="@+id/rgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_gender"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutContact"
+        app:layout_constraintStart_toStartOf="@id/textInputLayoutContact"
+        android:fontFamily="@font/roboto_serif"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@id/rgTitle"
+        app:layout_constraintTop_toBottomOf="@id/rgTitle">
+
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:fontFamily="@font/roboto_serif"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_serif"
+                app:layout_constraintTop_toTopOf="@id/rbFemale"
+                app:layout_constraintBottom_toBottomOf="@id/rbFemale"
+                android:text="@string/male" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/select_your_image"
+        android:fontFamily="@font/roboto_serif"
+        app:layout_constraintTop_toBottomOf="@id/rgGender" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivImg"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:fontFamily="@font/roboto_serif"-->
+<!--        app:layout_constraintStart_toStartOf="@id/tvImg"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvImg" />-->
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btnSelectImg"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/selct_image"-->
+<!--        android:fontFamily="@font/roboto_serif"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/ivImg"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@id/ivImg"-->
+<!--        app:layout_constraintTop_toTopOf="@id/ivImg" />-->
+    <TextView
+        android:id="@+id/tvImgName"
+        android:layout_width="250dp"
+        app:layout_constraintTop_toBottomOf="@id/tvImg"
+        app:layout_constraintStart_toStartOf="@id/tvImg"
+        android:text="@string/iamge_jpeg"
+        android:padding="20dp"
+        android:background="@drawable/rounded_border"
+        android:layout_height="60dp"/>
+    <TextView
+        android:id="@+id/btnSelectImg"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="#929292"
+        android:gravity="center"
+        android:text="@string/selct_image"
+        app:layout_constraintTop_toTopOf="@id/tvImgName"
+        app:layout_constraintBottom_toBottomOf="@id/tvImgName"
+        app:layout_constraintStart_toEndOf="@id/tvImgName"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/tvHobby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvImgName"
+        app:layout_constraintStart_toStartOf="@id/tvImg"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/roboto_serif"
+        android:text="@string/select_your_hobby"/>
+
+    <CheckBox
+        android:id="@+id/cbRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_serif"
+        android:text="@string/reading_books"
+        app:layout_constraintStart_toStartOf="@id/tvHobby"
+        app:layout_constraintTop_toBottomOf="@id/tvHobby" />
+    <CheckBox
+        android:id="@+id/cbWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_serif"
+        android:text="@string/writing"
+        app:layout_constraintTop_toTopOf="@id/cbRead"
+        app:layout_constraintBottom_toBottomOf="@id/cbRead"
+        app:layout_constraintStart_toEndOf="@id/cbRead"
+        />
+    <CheckBox
+        android:id="@+id/cbListen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/cbWrite"
+        app:layout_constraintBottom_toBottomOf="@id/cbWrite"
+        app:layout_constraintStart_toEndOf="@id/cbWrite"
+        android:text="@string/listening"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbWrite" />
+
+
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/rvUserList"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btnSubmit"-->
+    <!--        android:layout_margin="16dp"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+
